@@ -14,27 +14,16 @@ const MainView = () => {
                 padding={20}
                 background="greenTint"
                 border="muted"
-                flex={2}>
+                flex={3}>
                 <TaskList />
             </Pane>
             <Pane
-                display="flex"
-                flexDirection="column"
-                flex={3}>
-                <Pane
-                    padding={20}
-                    flex={2}
-                    background="orangeTint"
-                    border="muted">
-                    <TaskForm />
-                </Pane>
-                <Pane
-                    padding={20}
-                    flex={3}
-                    background="redTint"
-                    border="muted">
-                    <TaskDetail />
-                </Pane>
+                padding={20}
+                flex={2}
+                background="redTint"
+                flex={3}
+                border="muted">
+                <TaskDetail />
             </Pane>
         </Pane>
     );
