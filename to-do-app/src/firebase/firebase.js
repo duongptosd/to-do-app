@@ -1,5 +1,10 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import 'firebase/auth';
+
+import { authState } from 'rxfire/auth';
+import { collectionData } from 'rxfire/firestore';
+import { filter } from 'rxjs/operators';
 
 // const config = {
 //   apiKey: process.env.REACT_APP_API_KEY,
@@ -22,7 +27,11 @@ const config = {
     measurementId: "G-0ETE3RLZPF"
 }
 
-firebase.initializeApp(config);
-const app = firebase.firestore();
+const app = firebase.initializeApp(config);
+const firestore = firebase.firestore(app);
+const auth = firebase.auth(app);
 
+const loggedIn$ = authState(auth).pipe(filter(user => !!user));
+
+export { app, auth, firestore, collectionData, loggedIn$ };
 export default app;

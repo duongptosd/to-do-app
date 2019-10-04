@@ -1,21 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'evergreen-ui';
-import { collectionData } from 'rxfire/firestore';
+import { firestore, loggedIn$ } from '../firebase/firebase';
 
-import firebase from '../firebase/firebase';
-
-const tasksRef = firebase.collection('tasks');
+const tasksRef = firestore.collection('/tasks');
 
 const TaskList = () => {
-    const [tasks, setTasks] = useState([]);
-    useEffect(() => {
-        tasksRef
-        .get()
-        .then(res => {
-            const data = res.docs.map(doc => doc.data());
-            console.log(data);
-        });
-    });
+    const [tasks, setTasks] = useState([
+        {
+            id: 0,
+            author: 'Guest 0',
+            content: 'Content 0',
+            created_date: '25-09-2019',
+            deadline_date: '25-10-2019',
+            name: 'Task 0'
+        }
+    ]);
+    const creatData = () => {
+        firestore
+            .collection('tasks')
+            .doc('0SiZceRPf0bQ5fMLU3qU')
+            .set(
+                {
+                    id: 0,
+                    author: 'Guest 0',
+                    content: 'Content 0',
+                    created_date: '25-09-2019',
+                    deadline_date: '25-10-2019',
+                    name: 'Task 0'
+                }
+            );
+    };
     return (
         <Table>
             <Table.Head>
@@ -34,7 +48,7 @@ const TaskList = () => {
             </Table.Head>
             <Table.Body height={240}>
                 {tasks.map(task => (
-                    <Table.Row key={task.id} isSelectable onSelect={() => alert(task.name)}>
+                    <Table.Row key={task.id} isSelectable onSelect={creatData}>
                         <Table.TextCell>{task.name}</Table.TextCell>
                         <Table.TextCell>{task.content}</Table.TextCell>
                         <Table.TextCell isNumber>{task.created_date}</Table.TextCell>

@@ -2,7 +2,6 @@ import React from 'react';
 import { Pane } from 'evergreen-ui';
 
 import TaskDetail from '../components/task-detail';
-import TaskForm from '../components/task-form';
 import TaskList from '../components/task-list';
 
 const MainView = () => {
