@@ -33,6 +33,19 @@ const TaskSocial = () => {
             <Pane display="flex" alignItems="center" marginRight={40}>
                 <Icon icon="info-sign" color="success" marginRight={10} />
             </Pane>
+            <CardBody />
+        </Pane>
+    );
+}
+
+const CardBody = () => {
+    return (
+        <Pane
+            width={600}
+            height={450}
+            border="default"
+            borderColor="dark"
+            borderRadius="1%">
             <CardContent />
         </Pane>
     );
@@ -40,8 +53,16 @@ const TaskSocial = () => {
 
 const CardContent = () => {
     return (
-        <Pane width={600} height={450} border="default" borderColor="dark" borderRadius="1%">
-            Alohadance
+        <Pane
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-around"
+            backgroundColor="white"
+            height="30%"
+            padding="5%">
+            <Heading size={500}>Learning React? Start Small</Heading>
+            <Text size={400}>Can't pry yoursef away from the tutorials? The cure is to make tiny little experiment apps.</Text>
+            <Text size={400} color="#DADCDE">dev.to</Text>
         </Pane>
     );
 }
