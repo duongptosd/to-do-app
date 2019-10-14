@@ -47,6 +47,7 @@ const CardBody = () => {
             borderColor="dark"
             borderRadius="1%">
             <CardContent />
+            <BlockColor text="DEV" />
         </Pane>
     );
 }
@@ -63,6 +64,33 @@ const CardContent = () => {
             <Heading size={500}>Learning React? Start Small</Heading>
             <Text size={400}>Can't pry yoursef away from the tutorials? The cure is to make tiny little experiment apps.</Text>
             <Text size={400} color="#DADCDE">dev.to</Text>
+        </Pane>
+    );
+}
+
+const CardInfo = () => {
+    return (
+        <Pane
+            display="flex"
+            flexDirection="column">
+            <Pane
+                display="flex">
+            </Pane>
+        </Pane>
+    );
+}
+
+const BlockColor = (props) => {
+    return (
+        <Pane
+            width={60}
+            height={60}
+            display="flex"
+            color="white"
+            justifyContent="center"
+            alignItems="center"
+            backgroundColor="black">
+            <Text color="white">{props.text}</Text>
         </Pane>
     );
 }
