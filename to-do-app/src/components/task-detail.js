@@ -41,13 +41,15 @@ const TaskSocial = () => {
 const CardBody = () => {
     return (
         <Pane
+            display="flex"
+            flexDirection="column"
             width={600}
             height={450}
             border="default"
             borderColor="dark"
             borderRadius="1%">
+            <CardInfo />
             <CardContent />
-            <BlockColor text="DEV" />
         </Pane>
     );
 }
@@ -71,11 +73,19 @@ const CardContent = () => {
 const CardInfo = () => {
     return (
         <Pane
+            borderTopLeftRadius="1%"
+            borderTopRightRadius="1%"
+            flex={1}
+            padding={5}
             display="flex"
-            flexDirection="column">
-            <Pane
-                display="flex">
+            flexDirection="column"
+            justifyContent="space-between"
+            backgroundColor="#FFA003">
+            <BlockColor height={60} width={60} text="DEV" />
+            <Pane textAlign="center">
+                <Heading size={900} color="white">Learning React? Start small</Heading>
             </Pane>
+            <AuthorInfo flex={1} name="Cristiano" />
         </Pane>
     );
 }
@@ -83,14 +93,34 @@ const CardInfo = () => {
 const BlockColor = (props) => {
     return (
         <Pane
-            width={60}
-            height={60}
+            height={props.height}
+            width={props.width}
             display="flex"
             color="white"
             justifyContent="center"
             alignItems="center"
             backgroundColor="black">
             <Text color="white">{props.text}</Text>
+        </Pane>
+    );
+}
+
+const AuthorInfo = (props) => {
+    return (
+        <Pane
+            padding={5}
+            alignSelf="flex-end"
+            width={200}
+            height={50}
+            backgroundColor="white"
+            display="flex"
+            alignItems="center">
+            <Pane flex={1} textAlign="center">
+                <Heading color="#FFA003">{props.name}</Heading>
+            </Pane>
+            <Pane >
+                <BlockColor height={40} width={40} text="CR7" />
+            </Pane>
         </Pane>
     );
 }
