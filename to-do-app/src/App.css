@@ -28,3 +28,127 @@ body, html {
 .App-link {
   color: #09d3ac;
 }
+
+.loading-spinner g {
+  width: 100px;
+  height: 100px; 
+}
+
+.loading-spinner .cube {
+  animation: 1.5s linear infinite cube--animation;
+  transform-origin: 50% 50%;
+  fill: red;
+  opacity: 0.6;
+}
+
+.cube.cube1 {
+  animation-delay: 0.4s;
+  transform-origin: 48% 48%;
+}
+.cube.cube2 {
+  animation-delay: 0.5s;
+  transform-origin: 49% 48%;
+}
+.cube.cube3 {
+  animation-delay: 0.6s;
+  transform-origin: 50% 48%;
+}
+.cube.cube4 {
+  animation-delay: 0.7s;
+  transform-origin: 51% 48%;
+}
+.cube.cube5 {
+  animation-delay: 0.3s;
+  transform-origin: 48% 49%;
+}
+.cube.cube6 {
+  animation-delay: 0.4s;
+  transform-origin: 49% 49%;
+}
+.cube.cube7 {
+  animation-delay: 0.5s;
+  transform-origin: 50% 49%;
+}
+.cube.cube8 {
+  animation-delay: 0.6s;
+  transform-origin: 51% 49%;
+}
+.cube.cube9 {
+  animation-delay: 0.2s;
+  transform-origin: 48% 50%;
+}
+.cube.cube10 {
+  animation-delay: 0.3s;
+  transform-origin: 49% 50%;
+}
+.cube.cube11 {
+  animation-delay: 0.4s;
+  transform-origin: 50% 50%;
+}
+.cube.cube12 {
+  animation-delay: 0.5s;
+  transform-origin: 51% 50%;
+}
+.cube.cube13 {
+  animation-delay: 0.1s;
+  transform-origin: 48% 51%;
+}
+.cube.cube14 {
+  animation-delay: 0.2s;
+  transform-origin: 49% 51%;
+}
+.cube.cube15 {
+  animation-delay: 0.3s;
+  transform-origin: 50% 51%;
+}
+.cube.cube16 {
+  animation-delay: 0.4s;
+  transform-origin: 51% 51%;
+}
+
+.loading-spinner circle {
+  fill: transparent;
+  stroke: cyan;
+  opacity: 0.7;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  transform-origin: 50% 50%;
+  stroke-dasharray: 32;
+  stroke-dashoffset: 30;
+  animation: 2s circle--animation ease-in-out infinite both;
+}
+
+@keyframes svg--animation {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes circle--animation {
+  0%, 25% {
+    stroke-dashoffset: 30;
+    transform: rotate(0);
+  }
+  50%, 75% {
+    stroke-dashoffset: 5;
+    transform: rotate(30deg);
+  }
+  100% {
+    stroke-dashoffset: 30;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cube--animation {
+  0%,
+  60%,
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+  30% {
+    transform: scale3D(0, 0, 1);
+  }
+}
