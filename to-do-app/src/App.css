@@ -36,7 +36,6 @@ body, html {
 
 .loading-spinner .cube {
   animation: 1.5s linear infinite cube--animation;
-  transform-origin: 50% 50%;
   fill: red;
   opacity: 0.6;
 }
@@ -146,9 +145,9 @@ body, html {
   0%,
   60%,
   100% {
-    transform: scale3D(1, 1, 1);
+    transform: scale(1, 1) translate(-1%, 0);
   }
   30% {
-    transform: scale3D(0, 0, 1);
+    transform: scale(0, 0) translate(1%, 0);
   }
 }

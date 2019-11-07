@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Heading, Icon, Pane, Text } from 'evergreen-ui';
 import { CardBody } from './infoCard';
 import { DropDown } from './dropDown';
+import { SwitchToggle } from './switchToggle';
 import { useModal } from '../hooks/useModal';
 
 const TaskDetail = () => {
@@ -21,6 +22,7 @@ const TaskDetail = () => {
                     <TaskSocial />
                 </DropDown>
             </Pane>
+            <SwitchToggle />
         </>
     );
 }
