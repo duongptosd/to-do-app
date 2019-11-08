@@ -1,15 +1,15 @@
 import React from 'react';
-import { Wrapper, Label, Line, Radio, TogglePoint } from './switchToggle.css';
+import '../styles/switchToggle.css';
 
 export const SwitchToggle = () => {
   return (
-    <Wrapper>
-      <Label>
-        <Line>
-          <TogglePoint></TogglePoint>
-        </Line>
-      </Label>
-      <Radio type='checkbox' />
-    </Wrapper>
+    <div className='wrapper'>
+      <input id="switch1" type='checkbox' />
+      <label for="switch1" className='switch'>
+        <div className='line'>
+          <span className='toggle'></span>
+        </div>
+      </label>
+    </div>
   );
 };
