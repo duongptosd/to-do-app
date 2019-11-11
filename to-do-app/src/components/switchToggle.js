@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/switchToggle.css';
 
-export const SwitchToggle = () => {
+export const SwitchToggle = (props) => {
+  const [isChecked, setIsChecked] = useState(props.isChecked);
+  
+  useEffect(() => {
+    console.log("Lala: ", isChecked);
+  }, [isChecked]);
+
+  const toggleCheckBox = () => setIsChecked(!isChecked);
+
   return (
-    <div className='wrapper'>
-      <input id="switch1" type='checkbox' />
-      <label for="switch1" className='switch'>
-        <div className='line'>
-          <span className='toggle'></span>
+    <div className="wrapper">
+      <label>
+        <input type="checkbox" onChange={toggleCheckBox} checked={isChecked}/>
+        <div className="switch">
+          <span className="controller"></span>
         </div>
       </label>
     </div>

@@ -22,7 +22,7 @@ const TaskDetail = () => {
                     <TaskSocial />
                 </DropDown>
             </Pane>
-            <SwitchToggle />
+            <SwitchToggle isChecked={true} />
         </>
     );
 }
