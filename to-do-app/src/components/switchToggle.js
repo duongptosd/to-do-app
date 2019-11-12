@@ -3,10 +3,6 @@ import '../styles/switchToggle.css';
 
 export const SwitchToggle = (props) => {
   const [isChecked, setIsChecked] = useState(props.isChecked);
-  
-  useEffect(() => {
-    console.log("Lala: ", isChecked);
-  }, [isChecked]);
 
   const toggleCheckBox = () => setIsChecked(!isChecked);
 

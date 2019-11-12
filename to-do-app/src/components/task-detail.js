@@ -3,6 +3,7 @@ import { Button, Heading, Icon, Pane, Text } from 'evergreen-ui';
 import { CardBody } from './infoCard';
 import { DropDown } from './dropDown';
 import { SwitchToggle } from './switchToggle';
+import { SocialCard } from './socialCard';
 import { useModal } from '../hooks/useModal';
 
 const TaskDetail = () => {
@@ -22,7 +23,7 @@ const TaskDetail = () => {
                     <TaskSocial />
                 </DropDown>
             </Pane>
-            <SwitchToggle isChecked={true} />
+            <SocialCard />
         </>
     );
 }
