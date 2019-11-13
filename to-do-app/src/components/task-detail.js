@@ -7,6 +7,7 @@ import { SocialCard } from './socialCard';
 import { useModal } from '../hooks/useModal';
 
 const TaskDetail = () => {
+    const description = 'Danil "Dendi" Ishutin (born December 30, 1989) is a Ukrainian professional Dota 2 and former DotA player. Well known for his solo mid skills, he is regarded as one of the most creative players in the scene today.';
     const { isShowing, toggle } = useModal();
     return (
         <>
@@ -23,7 +24,15 @@ const TaskDetail = () => {
                     <TaskSocial />
                 </DropDown>
             </Pane>
-            <SocialCard />
+            <SocialCard
+                name="Dendi"
+                age={29}
+                title="Dota 2 Player"
+                description={description}
+                height="5'4"
+                marriage="Married"
+                zodiacSign="Gemini"
+            />
         </>
     );
 }

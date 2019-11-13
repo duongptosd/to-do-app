@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/socialCard.css'
 import 'font-awesome/css/font-awesome.min.css';
 
-export const SocialCard = () => {
+export const SocialCard = (props) => {
     return (
         <div className="card-wrapper">
             <div className="card">
@@ -20,10 +20,10 @@ export const SocialCard = () => {
                     </div>
                     <div className="text">
                         <div className="wrapper-name">
-                            <div className="name">Dendi, 29</div>
+                            <div className="name">{props.name}, {props.age}</div>
                             <i className="fa fa-check-circle"></i>
                         </div>
-                        <div className="title">Dota 2 Player</div>
+                        <div className="title">{props.title}</div>
                     </div>
                     <button className="like">
                         <div className="hexagon">
@@ -32,21 +32,19 @@ export const SocialCard = () => {
                     </button>
                 </div>
                 <div className="bottom">
-                    <div className="desc">
-                    Danil "Dendi" Ishutin (born December 30, 1989) is a Ukrainian professional Dota 2 and former DotA player. Well known for his solo mid skills, he is regarded as one of the most creative players in the scene today.
-                    </div>
+                    <div className="desc">{props.description}</div>
                     <div className="buttons">
                         <button className="height">
                             <i className="fa fa-user"></i>
-                            <div className="personal-info">5'4</div>
+                            <div className="personal-info">{props.height}</div>
                         </button>
                         <button className="marriage">
                             <i className="fa fa-user"></i>
-                            <div className="personal-info">Married</div>
+                            <div className="personal-info">{props.marriage}</div>
                         </button>
                         <button className="zodiac-sign">
                             <i className="fa fa-user"></i>
-                            <div className="personal-info">Gemini</div>
+                            <div className="personal-info">{props.zodiacSign}</div>
                         </button>
                     </div>
                 </div>
