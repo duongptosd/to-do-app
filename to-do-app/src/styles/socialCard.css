@@ -14,7 +14,12 @@
     max-width: 300px;
     border-radius: 1rem;
     background-color: #fffff9;
-    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.card:hover {
+    transform: translate(-5px, -10px);
+    box-shadow: 10px 20px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .card button {
@@ -28,7 +33,7 @@
     color: #fffff9;
     height: 450px;
     border-radius: 1rem 1rem 0 0;
-    background: url('../images/photo.jpg') no-repeat center center;
+    background: url('../images/dendi.jpg') no-repeat center center;
     background-size: cover;
 }
 
@@ -38,7 +43,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
 }
 
@@ -47,6 +52,7 @@
     top: 0;
     left: 0;
     padding: 1.5rem;
+    z-index: 1;
 }
 
 .card .top .social-buttons button {
@@ -57,6 +63,10 @@
     font-size: 1rem;
     color: #fffff9;
     margin-right: 0.5rem;
+}
+
+.card .top .social-buttons button:hover i {
+    color: #ffc629;
 }
 
 .card .top .like {
@@ -125,6 +135,7 @@
     margin-right: .5rem;
     background-color: #fdda64;
     border-radius: 1em;
+    padding: 0.1rem 0.3rem;
 }
 
 .card .bottom .buttons button i {
@@ -133,6 +144,11 @@
 
 .card .bottom .buttons button:hover {
     filter: brightness(110%);
+    animation: shake 0.5s;
+}
+
+.card .bottom .buttons button .personal-info {
+    margin-left: .2rem;
 }
 
 .hexagon {
@@ -164,4 +180,25 @@
 .hexagon::after {
     top: 100%;
     border-top: 11px solid #ffc629;
+}
+
+.hexagon:hover {
+    filter: brightness(110%);
+    transform: translateY(-10px) scale(1,1);
+}
+
+.card * {
+    transition: all .2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes shake {
+    25% {
+        transform: translateY(10%);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    75%, 100% {
+        transform: translateY(0);
+    }
 }
