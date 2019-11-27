@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500");
+
+.wrapper {
+    width: 450px;
+    height: 900px;
+    background: #ffc629;
+    display: flex;
+    justify-content: center;
+    font: 400 16px/1.5 'Poppins', sans-serif;
+    align-items: center;
+}
+
+.pane {
+    background: #fffff9;
+    max-width: 300px;
+    border-radius: 1rem;
+}
+
+.pane button {
+    cursor: pointer;
+    border: none;
+}
+
+.top-pane {
+    border-radius: 1rem 1rem 0 0;
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background: url('../images/dendi.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.top-pane .top-buttons {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.top-pane::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+}
+
+.top-pane .top-buttons button {
+    background: transparent;
+    color: #fffff9;
+}
+
+.top-pane .top-buttons button:hover {
+    color: #ffc629;
+}
+
+.top-pane .top-buttons button i {
+    margin-right: 0.5rem;
+}
+
+.top-pane .top-text {
+    z-index: 1;
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    color: #fffff9;
+}
+
+.top-pane .top-text .top-info {
+    display: flex;
+    align-items: center;
+}
+
+.top-pane .top-text .top-info i {
+    font-size: 1rem;
+    color: #009abf;
+}
+.top-pane .top-text .top-info .top-name {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.top-pane .top-text .top-title {
+    font-size: 0.8rem;
+}
+
+.top-pane .top-text .top-info i {
+    margin-left: 0.5rem;
+}
+
+.top-pane .top-like {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background: transparent;
+    z-index: 1;
+}
+
+.top-pane .top-like i {
+    color: #fffff9;
+}
