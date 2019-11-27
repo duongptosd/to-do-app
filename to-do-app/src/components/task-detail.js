@@ -33,6 +33,15 @@ const TaskDetail = () => {
                 marriage="Married"
                 zodiacSign="Gemini"
             />
+            <SocialCard
+                name="Fear"
+                age={35}
+                title="Dota 2 Player"
+                description={description}
+                height="5'4"
+                marriage="Married"
+                zodiacSign="Gemini"
+            />
         </>
     );
 }
